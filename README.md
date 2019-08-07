@@ -25,3 +25,5 @@ module "vpc" {
 ## Outputs
 
 * `id` - vpc id 
+* `default_route_table_id` - ID of VPC default route table
+* `default_security_group_id` - ID of VPC default security group 
