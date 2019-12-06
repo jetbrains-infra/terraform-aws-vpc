@@ -11,8 +11,8 @@ variable "cidr_block" {
 }
 
 locals {
-  project       = "${var.project}"
-  cidr_block    = "${var.cidr_block}"
-  dns_hostnames = "${var.dns_hostnames}"
-  dns_support   = "${var.dns_support}"
+  project       = var.project
+  cidr_block    = var.cidr_block
+  dns_hostnames = var.dns_hostnames
+  dns_support   = var.dns_support
 }
