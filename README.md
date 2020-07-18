@@ -4,21 +4,26 @@ Terraform module to create empty VPC.
 ## Usage
 
 Minimal setup:
-```
+```hcl
 module "vpc" {
-  source  = "github.com/jetbrains-infra/terraform-aws-vpc"
-  project = "ProjectName" // required
+  source = "github.com/jetbrains-infra/terraform-aws-vpc"
+  name   = "MyVPC" // required
 }
 ```
 
 All options with default values:
-```
+```hcl
 module "vpc" {
   source        = "github.com/jetbrains-infra/terraform-aws-vpc"
-  project       = "ProjectName" // required
+  name          = "MyVPC" // required
   cidr_block    = "10.0.0.0/22"
   dns_support   = true
   dns_hostnames = true     
+  tags          = {
+    Owner    = "Don John",
+    Project  = "Alice"
+    Customer = "Umbrella Corp."
+  } 
 }
 ```
 
